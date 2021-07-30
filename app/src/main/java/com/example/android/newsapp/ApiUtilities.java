@@ -9,7 +9,7 @@ public class ApiUtilities {
 
     public static ApiInterface getApiInterface(){
         if(retrofit==null){
-            retrofit = new Retrofit().Builder().baseUrl(ApiInterface.BASE_URL).addConverterFactory(GsonConverterFactory.create())
+            retrofit = new Retrofit.Builder().baseUrl(ApiInterface.BASE_URL).addConverterFactory(GsonConverterFactory.create())
                     .build();
         }
         return retrofit.create(ApiInterface.class);
