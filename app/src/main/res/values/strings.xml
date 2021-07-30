@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">NewsApp</string>
+
+    <string name="toolbar_title">News Feed</string>
+
+    <string name="home_tab">Home</string>
+    <string name="startup_tab">Startups</string>
+    <string name="sports_tab">Sports</string>
+    <string name="health_tab">Health</string>
+    <string name="science_tab">Science</string>
+    <string name="entertainment_tab">Entertainment</string>
+    <string name="technology_tab">Technology</string>
 </resources>
