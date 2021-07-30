@@ -70,7 +70,7 @@
             android:text="@string/science_tab" />
 
         <com.google.android.material.tabs.TabItem
-            android:id="@+id/entertaintment"
+            android:id="@+id/entertainment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/entertainment_tab" />
