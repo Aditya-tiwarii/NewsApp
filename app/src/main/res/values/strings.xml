@@ -10,4 +10,6 @@
     <string name="science_tab">Science</string>
     <string name="entertainment_tab">Entertainment</string>
     <string name="technology_tab">Technology</string>
+
+    <string name="webView_title">Full Article</string>
 </resources>

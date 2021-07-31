@@ -1,6 +1,5 @@
 package com.example.android.newsapp;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -36,16 +35,18 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull Adapter.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
+    public void onBindViewHolder(@NonNull Adapter.ViewHolder holder, int position) {
+
+
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context,webView.class);
-                intent.putExtra("url",modalClassArrayList.get(position).getUrl());
+                Intent intent = new Intent(context, webView.class);
+                intent.putExtra("url",modalClassArrayList.get(holder.getAdapterPosition()).getUrl());
                 context.startActivity(intent);
             }
         });
-        holder.mtime.setText("Published At:-"+modalClassArrayList.get(position).getPublishedAt());
+        holder.mtime.setText("Published At:-" + modalClassArrayList.get(position).getPublishedAt());
         holder.mheading.setText(modalClassArrayList.get(position).getTitle());
         holder.mauthor.setText(modalClassArrayList.get(position).getAuthor());
         holder.mcontent.setText(modalClassArrayList.get(position).getDescription());
@@ -55,7 +56,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
     @Override
     public int getItemCount() {
-        return 0;
+        return modalClassArrayList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
